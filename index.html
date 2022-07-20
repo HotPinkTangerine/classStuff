@@ -1,6 +1,26 @@
 <html>
+    <head>
+        <style>
+            .playButton {
+                 background-color: rgb(43, 183, 43);
+                border-radius: 5px;
+                border: none;
+                color: white;
+                text-align: center;
+                 display: inline-block;
+                font-size: 20px;
+                margin: 4px 2px;
+                 cursor: pointer;
+                 font-family: monospace;
+                width: 100px;
+                height: 50px;
+                }
+        </style>
+ <title>SPIRAL</title>
+ <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
     <link rel = "stylesheet" href="css.css"/>
-    <div>
+    <div class = "newSpace">
     <button class = "playButton">PLAY</button>
     <input placeholder="USERNAME" class="username-input" maxlength="12">
     <style>
@@ -11,27 +31,14 @@
             text-align: center;
             font-family: monospace;
         }
+        .NEXT {
+        display: none;
+    }
     </style>
-          <head>
-            <style>
-                .playButton {
-                     background-color: rgb(43, 183, 43);
-                    border-radius: 5px;
-                    border: none;
-                    color: white;
-                    padding: 15px 32px;
-                    text-align: center;
-                     display: inline-block;
-                    font-size: 20px;
-                    margin: 4px 2px;
-                     cursor: pointer;
-                     font-family: monospace;
-                    width: 100px;
-                    height: 50px;
-                    }
-            </style>
-         </head>
-         <div class="message">
-         </div>
-         <script src="app.js"></script>
+<div class="message">
+</div>
+<script 
+src="app.js">
+</script>
+<button class="NEXT"> NEXT</button>
 </html>
