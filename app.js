@@ -12,5 +12,5 @@ play.onclick = function(){
         //setTimeout(arguments.callee, 5000);
      
      //})()
-    message.textContent = "sup"
+    //message.textContent = "sup"
 }
