@@ -20,25 +20,32 @@
  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
     <link rel = "stylesheet" href="css.css"/>
-    <div class = "newSpace">
-    <button class = "playButton">PLAY</button>
-    <input placeholder="USERNAME" class="username-input" maxlength="12">
-    <style>
-        input {
-            border-radius: 5px;
-            width:100px;
-            height: 35px;
-            text-align: center;
-            font-family: monospace;
+    <div class="screen1">
+        <div class = "newSpace">
+        <button class = "playButton">PLAY</button>
+        <input placeholder="USERNAME" class="username-input" maxlength="12">
+        <style>
+            input {
+                border-radius: 5px;
+                width:100px;
+                height: 35px;
+                text-align: center;
+                font-family: monospace;
+            }
+            .NEXT {
+            display: none;
         }
-        .NEXT {
-        display: none;
-    }
-    </style>
-<div class="message">
-</div>
+        </style>
+        <div class="message">
+        </div>
+        <button class="NEXT"> NEXT</button>
+    </div>
+    </div>
+
+    <div class="screen2" style="height: 100%; display: none; margin: 0%;">
+    </div>
+
 <script 
 src="app.js">
 </script>
-<button class="NEXT"> NEXT</button>
 </html>
