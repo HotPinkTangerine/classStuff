@@ -13,3 +13,9 @@ body {
     background-size: cover;
     margin: 0%;
 }
+.player {
+    max-height: 300px;
+    max-width: 300px;
+    position: fixed;
+    position: absolute;
+}
