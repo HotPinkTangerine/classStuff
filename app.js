@@ -1,7 +1,6 @@
 let play = document.querySelector(".playButton")
 let message = document.querySelector(".message")
 let Intro = document.querySelector(".username-input")
-const player = 
 
 play.onclick = function(){
     message.textContent = "Welcome " + Intro.value + "!!!!"
