@@ -9,7 +9,7 @@ body {
     color: white;
 }
 .screen2 {
-    background-image:url('/images/square.jpg');
+    background-image:url('images/square.jpg');
     background-size: cover;
     margin: 0%;
 }
