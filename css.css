@@ -7,10 +7,14 @@ body {
 }
 .message {
     color: red;
+    font-family: monospace;
+    font-size: 30px;
 }
 .message2 {
     color:red;
     position: fixed;
+    font-family: monospace;
+    font-size: 30px;
 }
 .screen2 {
     background-image:url('images/square.jpg');
@@ -22,4 +26,7 @@ body {
     max-width: 300px;
     position: fixed;
     /* position: absolute; */
+}
+.NEXT {
+    font-family: monospace;
 }

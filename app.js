@@ -20,6 +20,6 @@ play.onclick = function(){
         // console.log(username.value)
         message2.textContent = username.value
         // player.style.bottom = 'auto'
-        message2.style.bottom = player.style.bottom
+        message2.style.top = player.style.top//yyyyyyyy won't it workkkkk!!!!!!!!!!!!!!!!!!!!! :-(
         // console.log(alert(player.style.bottom))
     }}
