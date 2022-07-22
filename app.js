@@ -19,7 +19,110 @@ play.onclick = function(){
         screen2.style["display"] = "block"
         // console.log(username.value)
         message2.textContent = username.value
-        // player.style.bottom = 'auto'
-        message2.style.top = player.style.top//yyyyyyyy won't it workkkkk!!!!!!!!!!!!!!!!!!!!! :-(
         // console.log(alert(player.style.bottom))
+
+//         let position = window.visualViewport.width / 2
+// let velocity = 0
+
+
+// let showVelocityWarnings = ()=>{
+//     let velocityMessage
+//     let velocityMessageColor
+
+//     if(velocity>5 || velocity < -5){
+//         velocityMessage = "Hyper speed!"
+//         velocityMessageColor = "red"
+//     }else if(velocity>2 || velocity < -2){
+//         velocityMessage = "Speed demon!"
+//         velocityMessageColor = "yellow"
+//     }else{
+//         velocityMessage = ""
+//         velocityMessageColor = "none"
+//     }
+//     sendMessageResponseArea.textContent = velocityMessage
+//     sendMessageResponseArea.style["background"] = velocityMessageColor
+// }
+
+// document.onkeydown = (keyEvent)=>{
+//     console.log("Keypressed: " + keyEvent.key)
+//     switch(keyEvent.key){
+//         case "a": 
+//         case "ArrowLeft":
+//             velocity = velocity -1
+//             break;
+//         case "d": 
+//         case "ArrowRight":
+//             velocity = velocity +1
+//             break;
+//     }
+//     console.log("Current velocity is", velocity)
+
+//     showVelocityWarnings()
+// }
+
+
+// const doNextFrame = ()=>{
+//     position = position + velocity
+//     player.style.left = position + "px"
+//     setTimeout(doNextFrame)
+// }
+// const doNextFrameUP = ()=>{
+//     position = position + velocity
+//     player.style.top = position + "px"
+//     setTimeout(doNextFrame)
+// }
+ 
+
+// doNextFrame()
+// doNextFrameUP()
+
+
+let position = window.visualViewport.width / 2
+let velocity = 0
+
+
+let showVelocityWarnings = ()=>{
+    let velocityMessage
+    let velocityMessageColor
+
+    if(velocity>5 || velocity < -5){
+        velocityMessage = "Hyper speed!"
+        velocityMessageColor = "red"
+    }else if(velocity>2 || velocity < -2){
+        velocityMessage = "Speed demon!"
+        velocityMessageColor = "yellow"
+    }else{
+        velocityMessage = ""
+        velocityMessageColor = "none"
+    }
+    sendMessageResponseArea.textContent = velocityMessage
+    sendMessageResponseArea.style["background"] = velocityMessageColor
+}
+
+document.onkeydown = (keyEvent)=>{
+    console.log("Keypressed: " + keyEvent.key)
+    switch(keyEvent.key){
+        case "s": 
+        case "ArrowLeft":
+            velocity = velocity -1
+            break;
+        case "w": 
+        case "ArrowRight":
+            velocity = velocity +1
+            break;
+    }
+    console.log("Current velocity is", velocity)
+
+    showVelocityWarnings()
+}
+
+
+const doNextFrame = ()=>{
+    position = position + velocity
+    player.style.left = position + "px"
+    setTimeout(doNextFrame)
+}
+ 
+
+doNextFrame()
     }}

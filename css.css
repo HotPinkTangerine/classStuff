@@ -6,27 +6,32 @@ body {
     background-color: black;
 }
 .message {
-    color: red;
+    color: white;
     font-family: monospace;
-    font-size: 30px;
+    font-size: 20px;
 }
 .message2 {
-    color:red;
-    position: fixed;
+    color:blue;
     font-family: monospace;
-    font-size: 30px;
+    font-size: 20px;
+    position: absolute;
+     bottom: 45px;
+    left: 5px; 
 }
 .screen2 {
     background-image:url('images/square.jpg');
-    background-size: cover;
+    background-size: contain;
     margin: 0%;
+    border:3px solid red;
 }
-.player {
-    max-height: 300px;
-    max-width: 300px;
-    position: fixed;
-    /* position: absolute; */
+img {
+    max-height: 100px;
+    max-width: 200px;
 }
 .NEXT {
     font-family: monospace;
+}
+.player {
+    position: relative;
+    top: 100px;
 }
