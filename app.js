@@ -1,11 +1,12 @@
 const play = document.querySelector(".playButton")
 const message = document.querySelector(".message")
 const username = document.querySelector(".username-input")
-const player = document.querySelector('.player')
+let player = document.querySelector('.player')
 const message2 = document.querySelector('.message2')
 const NEXT = document.querySelector('.NEXT')
 const sendMessageResponseArea = document.querySelector('.response-to-send-message')
 const sendMessageResponseArea2 = document.querySelector('.response-to-send-message2')
+
 
 play.onclick = function(){
     message.textContent = "Welcome " + username.value + "!!!!"
@@ -15,9 +16,10 @@ play.onclick = function(){
     NEXT.onclick = function(){
         const screen1 = document.querySelector(".screen1")
         screen1.style["display"] = "none"
-        const screen2 = document.querySelector(".screen2")
+        let screen2 = document.querySelector(".screen2")
         screen2.style["display"] = "block"
         message2.textContent = username.value
+    }
 
 //left and right
 
@@ -67,8 +69,13 @@ document.onkeydown = (keyEvent)=>{
 
 const doNextFrame = ()=>{
     position = position + velocity
-    player.style.left = position + "px"
+    
     setTimeout(doNextFrame)
+    if (position<1280 && position>0){
+        player.style.left = position + "px"
+    }else {
+        velocity = 0
+    }
 }
 
 doNextFrame()
@@ -102,8 +109,13 @@ let showVelocityWarnings2 = ()=>{
 
 const doNextFrame2 = ()=>{
     position2 = position2 + velocity2
-    player.style.top = position2 + "px"
+    
     setTimeout(doNextFrame2)
+    if (position2<560 && position2>0){
+        player.style.top = position2 + "px"
+    }else {
+        velocity2 = 0
+    }
 }
 
  
@@ -111,4 +123,4 @@ const doNextFrame2 = ()=>{
 doNextFrame2()
 
 
-    }}
+    }
