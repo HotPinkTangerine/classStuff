@@ -6,7 +6,7 @@ const message2 = document.querySelector('.message2')
 const NEXT = document.querySelector('.NEXT')
 const sendMessageResponseArea = document.querySelector('.response-to-send-message')
 const sendMessageResponseArea2 = document.querySelector('.response-to-send-message2')
-
+console.log(window.innerHeight, window.innerWidth)
 
 play.onclick = function(){
     message.textContent = "Welcome " + username.value + "!!!!"
@@ -71,7 +71,7 @@ const doNextFrame = ()=>{
     position = position + velocity
     
     setTimeout(doNextFrame)
-    if (position<1280 && position>0){
+    if (position<window.innerWidth - 137 && position>0){
         player.style.left = position + "px"
     }else {
         velocity = 0
@@ -111,7 +111,7 @@ const doNextFrame2 = ()=>{
     position2 = position2 + velocity2
     
     setTimeout(doNextFrame2)
-    if (position2<560 && position2>0){
+    if (position2<window.innerHeight - 120 && position2>0){
         player.style.top = position2 + "px"
     }else {
         velocity2 = 0
