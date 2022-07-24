@@ -54,10 +54,12 @@ document.onkeydown = (keyEvent)=>{
         case "ArrowRight":
             velocity = velocity +1
             break;
-            case "w": 
+        case "w": 
+        case "ArrowUp":
             velocity2 = velocity2 -1
             break;
-        case "s": 
+        case "s":
+        case "ArrowDown":
             velocity2 = velocity2 +1
             break;
     }
