@@ -71,7 +71,7 @@ const doNextFrame = ()=>{
     position = position + velocity
     
     setTimeout(doNextFrame)
-    if (position<window.innerWidth - 137 && position>0){
+    if (position<window.innerWidth - 88 && position>0){
         player.style.left = position + "px"
     }else {
         velocity = 0
@@ -111,7 +111,7 @@ const doNextFrame2 = ()=>{
     position2 = position2 + velocity2
     
     setTimeout(doNextFrame2)
-    if (position2<window.innerHeight - 120 && position2>0){
+    if (position2<window.innerHeight - 64 && position2>0){
         player.style.top = position2 + "px"
     }else {
         velocity2 = 0
