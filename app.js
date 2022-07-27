@@ -6,7 +6,6 @@ const message2 = document.querySelector('.message2')
 const NEXT = document.querySelector('.NEXT')
 const sendMessageResponseArea = document.querySelector('.response-to-send-message')
 const sendMessageResponseArea2 = document.querySelector('.response-to-send-message2')
-console.log(window.innerHeight, window.innerWidth)
 
 play.onclick = function(){
     message.textContent = "Welcome " + username.value + "!!!!"
@@ -71,12 +70,11 @@ document.onkeydown = (keyEvent)=>{
 
 const doNextFrame = ()=>{
     position = position + velocity
-    
     setTimeout(doNextFrame)
     if (position<window.innerWidth - 88 && position>0){
         player.style.left = position + "px"
     }else {
-        velocity = 0
+        velocity = 0 
     }
 }
 

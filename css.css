@@ -30,9 +30,24 @@ img {
 }
 .NEXT {
     font-family: monospace;
+    background-color: rgb(43, 183, 43);
+    border-radius: 5px;
 }
 .player {
     position: relative;
     max-height: 50px;
     max-width: 50px;
+}
+.title {
+    color: blue;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: monospace; 
+}
+.title2 {
+    color: purple;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: monospace;
+    display: inline;
 }
