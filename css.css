@@ -32,6 +32,7 @@ img {
     font-family: monospace;
     background-color: rgb(43, 183, 43);
     border-radius: 5px;
+    color: white;
 }
 .player {
     position: relative;
@@ -45,25 +46,9 @@ img {
     font-family: monospace; 
 }
 .title2 {
-    color: purple;
+    color: rgb(172, 29, 160);
     font-size: 50px;
     font-weight: 900;
     font-family: monospace;
     display: inline;
-}
-.skinButton {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    height: 100px;
-    width: 150px;
-    border-radius: 10px;
-    background-image: url('images/SPHERE.png');
-    background-size: 75px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: rgb(43, 183, 43);
-}
-.skinScreen {
-    background-image: url('images/skinScreen.png');
 }
