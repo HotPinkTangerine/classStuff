@@ -32,10 +32,7 @@ img {
     font-family: monospace;
     background-color: rgb(43, 183, 43);
     border-radius: 5px;
-<<<<<<< HEAD
     color: white;
-=======
->>>>>>> 4cf1978716b7a31ca387210b776875fdfa544556
 }
 .player {
     position: relative;
@@ -49,11 +46,7 @@ img {
     font-family: monospace; 
 }
 .title2 {
-<<<<<<< HEAD
     color: rgb(172, 29, 160);
-=======
-    color: purple;
->>>>>>> 4cf1978716b7a31ca387210b776875fdfa544556
     font-size: 50px;
     font-weight: 900;
     font-family: monospace;
