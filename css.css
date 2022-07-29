@@ -33,6 +33,7 @@ img {
     background-color: rgb(43, 183, 43);
     border-radius: 5px;
     color: white;
+    cursor: pointer;
 }
 .player {
     position: relative;
@@ -51,13 +52,4 @@ img {
     font-weight: 900;
     font-family: monospace;
     display: inline;
-}
-.skinButton {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: rgb(43, 183, 43);
-    width: 100px;
-    height: 50px;
-    border-radius: 5px;
 }

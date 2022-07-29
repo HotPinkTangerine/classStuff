@@ -10,7 +10,7 @@ const sendMessageResponseArea2 = document.querySelector('.response-to-send-messa
 play.onclick = function(){
     message.textContent = "Welcome " + username.value + "!!!!"
     const NEXT = document.querySelector(".NEXT")
-    NEXT.style["display"] = "inline"
+    NEXT.style["display"] = "block"
 
     NEXT.onclick = function(){
         const screen1 = document.querySelector(".screen1")
@@ -121,6 +121,4 @@ const doNextFrame2 = ()=>{
  
 
 doNextFrame2()
-
-
-    }
+}
