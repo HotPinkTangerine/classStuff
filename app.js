@@ -6,6 +6,22 @@ const message2 = document.querySelector('.message2')
 const NEXT = document.querySelector('.NEXT')
 const sendMessageResponseArea = document.querySelector('.response-to-send-message')
 const sendMessageResponseArea2 = document.querySelector('.response-to-send-message2')
+const skinButton = document.querySelector('.skinButton')
+const backButton = document.querySelector('.backButton')
+
+skinButton.onclick = function(){
+    const screen1 = document.querySelector(".screen1")
+    screen1.style["display"] = "none"
+    const screen3 = document.querySelector('.screen3')    
+    screen3.style['display'] = 'block'
+}
+
+backButton.onclick = function(){
+    const screen1 = document.querySelector(".screen1")
+    screen1.style["display"] = "block"
+    const screen3 = document.querySelector('.screen3')    
+    screen3.style['display'] = 'none'
+}
 
 play.onclick = function(){
     message.textContent = "Welcome " + username.value + "!!!!"
