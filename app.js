@@ -9,20 +9,6 @@ const sendMessageResponseArea2 = document.querySelector('.response-to-send-messa
 const skinButton = document.querySelector('.skinButton')
 const backButton = document.querySelector('.backButton')
 
-skinButton.onclick = function(){
-    const screen1 = document.querySelector(".screen1")
-    screen1.style["display"] = "none"
-    const screen3 = document.querySelector('.screen3')    
-    screen3.style['display'] = 'block'
-}
-
-backButton.onclick = function(){
-    const screen1 = document.querySelector(".screen1")
-    screen1.style["display"] = "block"
-    const screen3 = document.querySelector('.screen3')    
-    screen3.style['display'] = 'none'
-}
-
 play.onclick = function(){
     message.textContent = "Welcome " + username.value + "!!!!"
     const NEXT = document.querySelector(".NEXT")
@@ -83,7 +69,6 @@ document.onkeydown = (keyEvent)=>{
     showVelocityWarnings()
 }
 
-
 const doNextFrame = ()=>{
     position = position + velocity
     setTimeout(doNextFrame)
@@ -125,7 +110,6 @@ let showVelocityWarnings2 = ()=>{
 
 const doNextFrame2 = ()=>{
     position2 = position2 + velocity2
-    
     setTimeout(doNextFrame2)
     if (position2<window.innerHeight - 64 && position2>0){
         player.style.top = position2 + "px"

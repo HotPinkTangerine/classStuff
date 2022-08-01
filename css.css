@@ -59,24 +59,3 @@ img {
     margin: 0%;
     background-repeat: no-repeat;
 }
-.skinButton {
-    background-color: rgb(43, 183, 43);
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    width: 75px;
-    height: 50px;
-    border-radius: 5px;
-    background-image: url('images/SPHERE.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 40px;
-}
-.backButton {
-    background-color: rgb(43, 183, 43);
-    position: fixed;
-    border-radius: 5px;
-    border-color: rgb(43, 183, 43);
-    top: 10px;
-    left: 10px;
-}
