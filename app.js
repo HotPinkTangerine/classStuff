@@ -10,11 +10,13 @@ holler.onLoad(()=>{
             if (project[0] != user.name ){
                 player2.style.top = project[1]
                 console.log(project[1])
+                player2.style.top = project[2]
+                console.log(project[2])
             }
         })
 
 
-        const play = document.querySelector(".playButton")
+    const play = document.querySelector(".playButton")
     const message = document.querySelector(".message")
     const username = document.querySelector(".username-input")
     let player = document.querySelector('.player')
@@ -123,7 +125,7 @@ holler.onLoad(()=>{
         showVelocityWarnings2()
 
     const doNextFrame2 = ()=>{
-        holler.appInstance.notifyClients(user.name + "|" + player.style.top)
+        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left) 
         position2 = position2 + velocity2
         setTimeout(doNextFrame2)
         if (position2<window.innerHeight - 64 && position2>0){
