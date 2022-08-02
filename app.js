@@ -2,12 +2,13 @@ holler.onLoad(()=>{
     holler.me((user)=>{
 
                 const player2 = document.querySelector('.player2')
-        console.log(user.name)
+        console.log("my name: " + user.name)
 
         holler.onClientEvent(event=>{
             const project = event.split("|")
             console.log(project[0])
-            if (project[0] != user.name ){
+            if (project[0] != user.name && project[0] != "undefined"){
+                console.log("Valid other player: " + project[0])
                 player2.style.top = project[1]
                 console.log(project[1])
                 player2.style.left = project[2]
@@ -91,7 +92,7 @@ holler.onLoad(()=>{
     const doNextFrame = ()=>{
         position = position + velocity
         setTimeout(doNextFrame)
-        if (position<window.innerWidth - 88 && position>0){
+        if (position<1282 - 88 && position>0){
             player.style.left = position + "px"
         }else {
             velocity = 0
@@ -128,7 +129,7 @@ holler.onLoad(()=>{
         holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left) 
         position2 = position2 + velocity2
         setTimeout(doNextFrame2)
-        if (position2<window.innerHeight - 64 && position2>0){
+        if (position2<542 && position2>0){
             player.style.top = position2 + "px"
         }else {
             velocity2 = 0
