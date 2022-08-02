@@ -10,7 +10,7 @@ holler.onLoad(()=>{
             if (project[0] != user.name ){
                 player2.style.top = project[1]
                 console.log(project[1])
-                player2.style.top = project[2]
+                player2.style.left = project[2]
                 console.log(project[2])
             }
         })
