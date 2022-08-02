@@ -3,7 +3,7 @@ holler.onLoad(()=>{
 
                 const player2 = document.querySelector('.player2')
         console.log(user.name)
-        //receive
+
         holler.onClientEvent(event=>{
             const project = event.split("|")
             console.log(project[0])
@@ -11,9 +11,9 @@ holler.onLoad(()=>{
                 player2.style.top = project[1]
                 console.log(project[1])
             }
-            console.log("recived: | hello world")
         })
-        //send
+
+
         const play = document.querySelector(".playButton")
     const message = document.querySelector(".message")
     const username = document.querySelector(".username-input")
@@ -24,11 +24,6 @@ holler.onLoad(()=>{
     const sendMessageResponseArea2 = document.querySelector('.response-to-send-message2')
     const skinButton = document.querySelector('.skinButton')
     const backButton = document.querySelector('.backButton')
-        holler.appInstance.notifyClients(user.name + "|" + player.y)
-            console.log('testing')
-
-    
-
 
 
     play.onclick = function(){
@@ -128,7 +123,7 @@ holler.onLoad(()=>{
         showVelocityWarnings2()
 
     const doNextFrame2 = ()=>{
-        holler.appInstance.notifyClients(user.name + "|" + player.y)
+        holler.appInstance.notifyClients(user.name + "|" + player.style.top)
         position2 = position2 + velocity2
         setTimeout(doNextFrame2)
         if (position2<window.innerHeight - 64 && position2>0){
