@@ -2,11 +2,19 @@ holler.onLoad(()=>{
 
     holler.me((user)=>{
         console.log(user.name)
+        //receive
+        holler.onClientEvent(event=>{
+            const project = event.split("|")
+            if (project[0] != user.name ){
+                const player2 = document.querySelector('.player2')
+                player2.style.top = project[1]
+            }
+            console.log("recived: | hello world")
+        })
+        //send
+        holler.appInstance.notifyClients(user.name + "|" + player.y)
+            console.log('testing')
     })
-    holler.onClientEvent(event=>{
-        console.log("recived: " + event)
-    })
-    holler.appInstance.notifyClients('user.name')
 
     const play = document.querySelector(".playButton")
     const message = document.querySelector(".message")
