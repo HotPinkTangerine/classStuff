@@ -9,6 +9,14 @@ holler.onLoad(()=>{
             console.log(project[0])
             if (project[0] != user.name && project[0] != "undefined"){
                 console.log("Valid other player: " + project[0])
+                player2.style.top = project[1]
+                console.log(project[1])
+                player2.style.left = project[2]
+                console.log(project[2])
+                player2.velocity = project[3]
+                console.log(project[3])
+                player2.velocity2 = project[4]
+                console.log(project[4])
             }
         })
         
