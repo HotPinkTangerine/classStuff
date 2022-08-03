@@ -18,9 +18,9 @@ let p2v2 = 0
                 console.log(project[1])
                 player2.style.left = project[2]
                 console.log(project[2])
-                player2.p2v = project[3]
+                p2v = project[3]
                 console.log(project[3])
-                player2.p2v2 = project[4]
+                p2v2 = project[4]
                 console.log(project[4])
             }
         })
