@@ -143,7 +143,8 @@ holler.onLoad(()=>{
         holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left) 
         setTimeout(sendPosition)
     }
-    
+    sendPosition()
+
     }
     })
 })
