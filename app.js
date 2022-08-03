@@ -160,11 +160,7 @@ let p2v2 = 0
 
     const doNextFrame2 = ()=>{
         player2.style.top = player2.style.top + p2v2
-        if (player2.style.top<542 && player2.style.top>0){
             player2.style.top = player2.style.top + "px"
-        }else {
-            player2.style.top = 0
-        }
         
         setTimeout(doNextFrame2)
     }
@@ -173,11 +169,7 @@ let p2v2 = 0
     const doNextFrame = ()=>{
         player2.style.left = player2.style.left+ p2v
         setTimeout(doNextFrame)
-        if (player2.style.left<1282 - 88 && player2.style.left>0){
             player2.style.left = player2.style.left + "px"
-        }else {
-            player2.style.left = 0
-        }
     }
 
     doNextFrame()
