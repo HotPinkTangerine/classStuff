@@ -15,6 +15,8 @@ holler.onLoad(()=>{
                 console.log(project[2])
             }
         })
+        
+        // holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left) 
 
 
     const play = document.querySelector(".playButton")
@@ -125,21 +127,23 @@ holler.onLoad(()=>{
 
     const doNextFrame2 = ()=>{
         position2 = position2 + velocity2
-        setTimeout(doNextFrame2)
         if (position2<542 && position2>0){
             player.style.top = position2 + "px"
         }else {
             velocity2 = 0
         }
+        
+        setTimeout(doNextFrame2)
     }
     doNextFrame2()
-    const sendPosition = ()=>{
-        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left) 
-        sendPosition()
-    }
-    setTimeout(sendPosition, 100)
-    }
+
 
     
+    const sendPosition = ()=>{
+        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left) 
+        setTimeout(sendPosition)
+    }
+    
+    }
     })
 })
