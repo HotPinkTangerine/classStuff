@@ -136,9 +136,7 @@ holler.onLoad(()=>{
 
     
     const sendPosition = ()=>{
-        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left)
-        holler.appInstance.notifyClients(user.name + "|" + player.velocity + "|" + player.velocity) 
-        holler.appInstance.notifyClients(user.name + "|" + player.velocity2 + "|" + player.velocity2) 
+        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + player.velocity + "|" + player.velocity + "|" + player.velocity2 + "|" + player.velocity2)
         setTimeout(sendPosition)
     }
     sendPosition()
