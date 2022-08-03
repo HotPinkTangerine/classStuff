@@ -126,7 +126,7 @@ holler.onLoad(()=>{
         showVelocityWarnings2()
 
     const doNextFrame2 = ()=>{
-        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left) 
+        holler.appInstance.notifyClients(user.name + "|" + player2.style.top + "|" + player2.style.left) 
         position2 = position2 + velocity2
         setTimeout(doNextFrame2)
         if (position2<542 && position2>0){
