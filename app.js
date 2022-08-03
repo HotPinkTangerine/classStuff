@@ -148,7 +148,7 @@ let p2v2 = 0
 
     
     const sendPosition = ()=>{
-        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + player.velocity  + "|" + player.velocity2)
+        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + velocity  + "|" + velocity2)
         setTimeout(sendPosition)
     }
     sendPosition()
