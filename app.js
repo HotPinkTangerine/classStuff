@@ -21,6 +21,8 @@ let p2v2 = 0
                 console.log(project[3])
                 p2v2 = project[4]
                 console.log(project[4])
+                message3.textContent = username.value
+
             }
         })
         
@@ -32,6 +34,7 @@ let p2v2 = 0
     const username = document.querySelector(".username-input")
     let player = document.querySelector('.player')
     const message2 = document.querySelector('.message2')
+    const message3 = document.querySelector('.message3')
     const NEXT = document.querySelector('.NEXT')
     const sendMessageResponseArea = document.querySelector('.response-to-send-message')
     const sendMessageResponseArea2 = document.querySelector('.response-to-send-message2')
@@ -148,7 +151,7 @@ let p2v2 = 0
 
     
     const sendPosition = ()=>{
-        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + velocity  + "|" + velocity2)
+        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + velocity  + "|" + velocity2 + "|" + username.value)
         setTimeout(sendPosition)
     }
     sendPosition()
