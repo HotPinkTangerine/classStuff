@@ -128,7 +128,7 @@ holler.onLoad(()=>{
         
         position2 = position2 + velocity2
         setTimeout(doNextFrame2)
-        if (position2<554 && position2>10){
+        if (position2<542 && position2>0){
             player.style.top = position2 + "px"
         }else {
             velocity2 = 0
