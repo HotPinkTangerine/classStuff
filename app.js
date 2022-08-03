@@ -1,8 +1,7 @@
 holler.onLoad(()=>{
     holler.me((user)=>{
 
-let p2p = window.visualViewport.height / 2
-let p2p2 = window.visualViewport.height / 2
+
 let p2v = 0
 let p2v2 = 0
 
@@ -160,11 +159,11 @@ let p2v2 = 0
     
 
     const doNextFrame2 = ()=>{
-        p2p2 = p2p2 + p2v2
-        if (p2p2<542 && p2p2>0){
-            player2.style.top = p2p2 + "px"
+        player2.style.top = player2.style.top + p2v2
+        if (player2.style.top<542 && player2.style.top>0){
+            player2.style.top = player2.style.top + "px"
         }else {
-            p2v2 = 0
+            player2.style.top = 0
         }
         
         setTimeout(doNextFrame2)
@@ -172,12 +171,12 @@ let p2v2 = 0
     doNextFrame2()
 
     const doNextFrame = ()=>{
-        p2p = p2p + p2v
+        player2.style.left = player2.style.left+ p2v
         setTimeout(doNextFrame)
-        if (p2p<1282 - 88 && p2p>0){
-            player2.style.left = p2p + "px"
+        if (player2.style.left<1282 - 88 && player2.style.left>0){
+            player2.style.left = player2.style.left + "px"
         }else {
-            p2v = 0
+            player2.style.left = 0
         }
     }
 
