@@ -9,10 +9,6 @@ holler.onLoad(()=>{
             console.log(project[0])
             if (project[0] != user.name && project[0] != "undefined"){
                 console.log("Valid other player: " + project[0])
-                player2.style.top = project[1]
-                console.log(project[1])
-                player2.style.left = project[2]
-                console.log(project[2])
             }
         })
         
@@ -142,6 +138,7 @@ holler.onLoad(()=>{
     const sendPosition = ()=>{
         holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left)
         holler.appInstance.notifyClients(user.name + "|" + player.velocity + "|" + player.velocity) 
+        holler.appInstance.notifyClients(user.name + "|" + player.velocity2 + "|" + player.velocity2) 
         setTimeout(sendPosition)
     }
     sendPosition()
