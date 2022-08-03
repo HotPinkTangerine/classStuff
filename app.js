@@ -1,6 +1,9 @@
 holler.onLoad(()=>{
     holler.me((user)=>{
 
+let p2v = 0
+let p2v2 = 0
+
                 const player2 = document.querySelector('.player2')
         console.log("my name: " + user.name)
 
@@ -13,9 +16,9 @@ holler.onLoad(()=>{
                 console.log(project[1])
                 player2.style.left = project[2]
                 console.log(project[2])
-                player2.velocity = project[3]
+                player2.p2v = project[3]
                 console.log(project[3])
-                player2.velocity2 = project[4]
+                player2.p2v2 = project[4]
                 console.log(project[4])
             }
         })
@@ -47,7 +50,7 @@ holler.onLoad(()=>{
         }
 
     //left and right
-
+    
             let position = window.visualViewport.width / 2
     let velocity = 0
 
@@ -150,5 +153,32 @@ holler.onLoad(()=>{
     sendPosition()
 
     }
+
+    //p2v
+
+    const doNextFrame2 = ()=>{
+        position2 = position2 + p2v
+        if (position2<542 && position2>0){
+            player2.style.top = position2 + "px"
+        }else {
+            p2v = 0
+        }
+        
+        setTimeout(doNextFrame2)
+    }
+    doNextFrame2()
+
+    const doNextFrame = ()=>{
+        position = position + p2v2
+        setTimeout(doNextFrame)
+        if (position<1282 - 88 && position>0){
+            player2.style.left = position + "px"
+        }else {
+            p2v2 = 0
+        }
+    }
+
+    doNextFrame()
+
     })
 })
