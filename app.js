@@ -25,8 +25,6 @@ holler.onLoad(()=>{
     const NEXT = document.querySelector('.NEXT')
     const sendMessageResponseArea = document.querySelector('.response-to-send-message')
     const sendMessageResponseArea2 = document.querySelector('.response-to-send-message2')
-    const skinButton = document.querySelector('.skinButton')
-    const backButton = document.querySelector('.backButton')
 
 
     play.onclick = function(){
@@ -127,6 +125,7 @@ holler.onLoad(()=>{
 
     const doNextFrame2 = ()=>{
         holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left) 
+        
         position2 = position2 + velocity2
         setTimeout(doNextFrame2)
         if (position2<542 && position2>0){
