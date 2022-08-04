@@ -10,19 +10,11 @@ body {
     font-family: monospace;
     font-size: 20px;
 }
-.message3 {
-    color:blue;
-    font-family: monospace;
-    font-size: 10px;
-    position: absolute;
-     bottom: 25px;
-    left: 5px; 
-}
 .message2 {
     color:blue;
     font-family: monospace;
     font-size: 10px;
-    position: absolute;
+    position: relative;
      bottom: 25px;
     left: 5px; 
 }
@@ -45,11 +37,6 @@ img {
 }
 .player {
     position: relative;
-    max-height: 50px;
-    max-width: 50px;
-}
-.player2 {
-    position: absolute;
     max-height: 50px;
     max-width: 50px;
 }

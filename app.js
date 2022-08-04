@@ -1,11 +1,6 @@
 holler.onLoad(()=>{
     holler.me((user)=>{
 
-
-let p2v = 0
-let p2v2 = 0
-
-        let player2 = document.querySelector('.player2')
         console.log("my name: " + user.name)
 
         function makePlayer(){
@@ -19,20 +14,39 @@ let p2v2 = 0
             document.body.appendChild(PLAYER)
             return PLAYER
         }
-
+        const userNames = []
+        let players = []
         holler.onClientEvent(event=>{
             const project = event.split("|")
             console.log(project[0])
             if (project[0] != user.name && project[0] != "undefined"){
+                console.log('usernameindex' + userNames.indexOf(project[0]))
+                console.log('userNames' + userNames)
+                if (userNames.indexOf(project[0]) == -1){
+                    console.log('im present')
+                    userNames.push(project[0])
+                    players.push(makePlayer())
+                }
+                userNames.indexOf(project[0])
+
+                let currentPlayer = players[userNames.indexOf(project[0])]
+
                 console.log("Valid other player: " + project[0])
-                player.style.top = project[1]
+
+                console.log('currentplayer : ' , currentPlayer)
+
+                currentPlayer.style.top = project[1]
                 console.log(project[1])
-                player.style.left = project[2]
+
+                currentPlayer.style.left = project[2]
                 console.log(project[2])
+
                 velocit = project[3]
                 console.log(project[3])
+
                 velocity2 = project[4]
                 console.log(project[4])
+
                 message2.textContent = username.value
 
             }
@@ -47,19 +61,18 @@ let p2v2 = 0
     const sendMessageResponseArea = document.querySelector('.response-to-send-message')
     const sendMessageResponseArea2 = document.querySelector('.response-to-send-message2')
 
-
     play.onclick = function(){
         message.textContent = "Welcome " + username.value + "!!!!"
         const NEXT = document.querySelector(".NEXT")
         NEXT.style["display"] = "block"
         
         NEXT.onclick = function(){
+            userNames.push(user.name)
             const screen1 = document.querySelector(".screen1")
             screen1.style["display"] = "none"
             let screen2 = document.querySelector(".screen2")
             screen2.style["display"] = "block"
             message2.textContent = username.value
-            player = makePlayer()
         }
 
     //left and right
@@ -160,8 +173,11 @@ let p2v2 = 0
 
     
     const sendPosition = ()=>{
-        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + velocity  + "|" + velocity2 + "|" + username.value)
+        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + velocity  + "|" + velocity2 + "|" + username.value + "|")
         setTimeout(sendPosition,10)
+
+        console.log('user.name is :' + user.name)
+
     }
     sendPosition()
 
@@ -170,21 +186,6 @@ let p2v2 = 0
     //p2v
     
 
-    const doNextFrame2 = ()=>{
-        player2.style.top = player2.style.top + p2v2
-            player2.style.top = player2.style.top + "px"
-        
-        setTimeout(doNextFrame2)
-    }
-    doNextFrame2()
-
-    const doNextFrame = ()=>{
-        player2.style.left = player2.style.left+ p2v
-        setTimeout(doNextFrame)
-            player2.style.left = player2.style.left + "px"
-    }
-
-    doNextFrame()
-
+    
     })
 })
