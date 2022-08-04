@@ -9,9 +9,6 @@ let p2v2 = 0
         console.log("my name: " + user.name)
 
         holler.onClientEvent(event=>{
-            if (project[5] !== username.value){
-                message3.textContent = username.value
-            }
             const project = event.split("|")
             console.log(project[0])
             if (project[0] != user.name && project[0] != "undefined"){
@@ -24,6 +21,7 @@ let p2v2 = 0
                 console.log(project[3])
                 p2v2 = project[4]
                 console.log(project[4])
+                message2.textContent = username.value
 
             }
         })
