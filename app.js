@@ -41,7 +41,7 @@ holler.onLoad(()=>{
                 currentPlayer.style.left = project[2]
                 console.log(project[2])
 
-                velocit = project[3]
+                velocity2 = project[3]
                 console.log(project[3])
 
                 velocity2 = project[4]
