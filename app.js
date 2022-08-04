@@ -5,7 +5,7 @@ holler.onLoad(()=>{
 let p2v = 0
 let p2v2 = 0
 
-        let player2 = makePlayer()
+        let player2 = document.querySelector('.player2')
         console.log("my name: " + user.name)
 
         function makePlayer(){
