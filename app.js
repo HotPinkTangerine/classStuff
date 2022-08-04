@@ -5,12 +5,12 @@ holler.onLoad(()=>{
 let p2v = 0
 let p2v2 = 0
 
-        const player2 = document.querySelector('.player2')
+        const player2 = makePlayer()
         console.log("my name: " + user.name)
 
         function makePlayer(){
             let PLAYER = document.createElement("IMG");
-            PLAYER.style.position = 'relative'
+            PLAYER.style.position = 'absolute'
             PLAYER.style.top = '100px'
             PLAYER.style.left = '100px'
             PLAYER.setAttribute("src", "images/GRAY.png")
