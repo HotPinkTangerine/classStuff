@@ -56,7 +56,7 @@ let p2v2 = 0
             let screen2 = document.querySelector(".screen2")
             screen2.style["display"] = "block"
             message2.textContent = username.value
-            player = makePlayer()
+            player = makePlayer().PLAYER
         }
 
     //left and right
