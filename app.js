@@ -5,8 +5,17 @@ holler.onLoad(()=>{
 let p2v = 0
 let p2v2 = 0
 
-                const player2 = document.querySelector('.player2')
+        const player2 = document.querySelector('.player2')
         console.log("my name: " + user.name)
+
+        function makePlayer(){
+            let PLAYER = document.createElement("IMG");
+            PLAYER.setAttribute("src", "images/GRAY.png")
+            PLAYER.setAttribute("height", "50px")
+            PLAYER.setAttribute("width", "50px")
+            document.body.appendChild(PLAYER)
+            return PLAYER
+        }
 
         holler.onClientEvent(event=>{
             const project = event.split("|")
@@ -31,7 +40,6 @@ let p2v2 = 0
     const username = document.querySelector(".username-input")
     let player = document.querySelector('.player')
     const message2 = document.querySelector('.message2')
-    const message3 = document.querySelector('.message3')
     const NEXT = document.querySelector('.NEXT')
     const sendMessageResponseArea = document.querySelector('.response-to-send-message')
     const sendMessageResponseArea2 = document.querySelector('.response-to-send-message2')
@@ -41,13 +49,14 @@ let p2v2 = 0
         message.textContent = "Welcome " + username.value + "!!!!"
         const NEXT = document.querySelector(".NEXT")
         NEXT.style["display"] = "block"
-
+        
         NEXT.onclick = function(){
             const screen1 = document.querySelector(".screen1")
             screen1.style["display"] = "none"
             let screen2 = document.querySelector(".screen2")
             screen2.style["display"] = "block"
             message2.textContent = username.value
+            player = makePlayer()
         }
 
     //left and right
