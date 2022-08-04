@@ -9,7 +9,10 @@ let p2v2 = 0
         console.log("my name: " + user.name)
 
         function makePlayer(){
-            let PLAYER = document.createElement("IMG").style.position = 'absolute';
+            let PLAYER = document.createElement("IMG");
+            PLAYER.style.position = 'relative'
+            PLAYER.style.top = '100px'
+            PLAYER.style.left = '100px'
             PLAYER.setAttribute("src", "images/GRAY.png")
             PLAYER.setAttribute("height", "50px")
             PLAYER.setAttribute("width", "50px")
@@ -56,7 +59,7 @@ let p2v2 = 0
             let screen2 = document.querySelector(".screen2")
             screen2.style["display"] = "block"
             message2.textContent = username.value
-            player = makePlayer().PLAYER
+            player = makePlayer()
         }
 
     //left and right
