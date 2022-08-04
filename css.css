@@ -66,3 +66,6 @@ img {
     font-family: monospace;
     display: inline;
 }
+button:hover{
+    background-color: red;
+}

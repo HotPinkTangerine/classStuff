@@ -21,14 +21,11 @@ let p2v2 = 0
                 console.log(project[3])
                 p2v2 = project[4]
                 console.log(project[4])
-                message3.textContent = username.value
+                message2.textContent = username.value
 
             }
         })
-        
-        // holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left) 
-
-
+         
     const play = document.querySelector(".playButton")
     const message = document.querySelector(".message")
     const username = document.querySelector(".username-input")
