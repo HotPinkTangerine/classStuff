@@ -32,8 +32,8 @@ holler.onLoad(()=>{
                 let currentPlayer = players[userNames.indexOf(project[0])]
 
                 console.log("Valid other player: " + project[0])
-
                 console.log('currentplayer : ' , currentPlayer)
+                console.log('third username' + userNames[2])
 
                 currentPlayer.style.top = project[1]
                 console.log(project[1])
