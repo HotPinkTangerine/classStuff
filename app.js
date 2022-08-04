@@ -5,7 +5,7 @@ holler.onLoad(()=>{
 let p2v = 0
 let p2v2 = 0
 
-        const player2 = makePlayer()
+        let player2 = makePlayer()
         console.log("my name: " + user.name)
 
         function makePlayer(){
@@ -60,6 +60,7 @@ let p2v2 = 0
             screen2.style["display"] = "block"
             message2.textContent = username.value
             player = makePlayer()
+            player2 = makePlayer()
         }
 
     //left and right
