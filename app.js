@@ -9,7 +9,7 @@ let p2v2 = 0
         console.log("my name: " + user.name)
 
         function makePlayer(){
-            let PLAYER = document.createElement("IMG");
+            let PLAYER = document.createElement("IMG").style.position = 'absolute';
             PLAYER.setAttribute("src", "images/GRAY.png")
             PLAYER.setAttribute("height", "50px")
             PLAYER.setAttribute("width", "50px")
