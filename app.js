@@ -4,7 +4,8 @@ holler.onLoad(()=>{
 
 let p2v = 0
 let p2v2 = 0
-let player2
+
+        let player2 = document.querySelector('.player2')
         console.log("my name: " + user.name)
 
         function makePlayer(){
@@ -24,13 +25,13 @@ let player2
             console.log(project[0])
             if (project[0] != user.name && project[0] != "undefined"){
                 console.log("Valid other player: " + project[0])
-                player2.style.top = project[1]
+                player.style.top = project[1]
                 console.log(project[1])
-                player2.style.left = project[2]
+                player.style.left = project[2]
                 console.log(project[2])
-                p2v = project[3]
+                velocit = project[3]
                 console.log(project[3])
-                p2v2 = project[4]
+                velocity2 = project[4]
                 console.log(project[4])
                 message2.textContent = username.value
 
@@ -59,7 +60,6 @@ let player2
             screen2.style["display"] = "block"
             message2.textContent = username.value
             player = makePlayer()
-            player2 = makePlayer()
         }
 
     //left and right
