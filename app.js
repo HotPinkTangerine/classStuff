@@ -17,8 +17,10 @@ holler.onLoad(()=>{
         const userNames = []
         let players = []
         holler.onClientEvent(event=>{
+            console.log('yolo')
             const project = event.split("|")
             console.log(project[0])
+            console.log('stuff' + (project[0] != user.name && project[0] != "undefined"))
             if (project[0] != user.name && project[0] != "undefined"){
                 console.log('usernameindex' + userNames.indexOf(project[0]))
                 console.log('userNames' + userNames)
