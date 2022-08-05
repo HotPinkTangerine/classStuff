@@ -17,13 +17,13 @@ holler.onLoad(()=>{
         const userNames = []
         let players = []
         holler.onClientEvent(event=>{
-            console.log('yolo')
+            // console.log('yolo')
             const project = event.split("|")
-            console.log(project[0])
-            console.log('stuff' + (project[0] != user.name && project[0] != "undefined"))
+            // console.log(project[0])
+            // console.log('stuff ' + (project[0] != user.name && project[0] != "undefined"))
             if (project[0] != user.name && project[0] != "undefined"){
-                console.log('usernameindex', players[userNames.indexOf(project[0])])
-                console.log('userNames' + userNames)
+                // console.log('usernameindex', players[userNames.indexOf(project[0])])
+                // console.log('userNames' + userNames)
                 if (userNames.indexOf(project[0]) == -1){
                     console.log('im present')
                     userNames.push(project[0])
@@ -33,21 +33,21 @@ holler.onLoad(()=>{
 
                 let currentPlayer = players[userNames.indexOf(project[0])]
 
-                console.log("Valid other player: " + project[0])
-                console.log('currentplayer : ' , currentPlayer)
-                console.log('third username' + userNames[2])
+                // console.log("Valid other player: " + project[0])
+                // console.log('currentplayer : ' , currentPlayer)
+                // console.log('third username' + userNames[2])
 
                 currentPlayer.style.top = project[1]
-                console.log(project[1])
+                // console.log(project[1])
 
                 currentPlayer.style.left = project[2]
-                console.log(project[2])
+                // console.log(project[2])
 
                 velocity2 = project[3]
-                console.log(project[3])
+                // console.log(project[3])
 
                 velocity2 = project[4]
-                console.log(project[4])
+                // console.log(project[4])
 
                 message2.textContent = username.value
 
@@ -189,7 +189,7 @@ holler.onLoad(()=>{
                 holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + velocity  + "|" + velocity2 + "|" + username.value + "|" + message2)
                 setTimeout(sendPosition,10)
 
-                console.log('user.name is :' + user.name)
+                // console.log('user.name is :' + user.name)
 
             }
             sendPosition()
