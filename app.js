@@ -19,40 +19,40 @@ holler.onLoad(()=>{
         let players = []
         holler.onClientEvent(event=>{
             console.log('event is ' + event)
-            // // console.log('yolo')
-            // const project = event.split("|")
-            // // console.log(project[0])
-            // // console.log('stuff ' + (project[0] != user.name && project[0] != "undefined"))
-            // if (project[0] != user.name && project[0] != "undefined"){
-            //     // console.log('usernameindex', players[userNames.indexOf(project[0])])
-            //     // console.log('userNames' + userNames)
-            //     if (userNames.indexOf(project[0]) == -1){
-            //         console.log('im present')
-            //         userNames.push(project[0])
-            //         players.push(makePlayer())
-            //     }
-            //     userNames.indexOf(project[0])
+            // console.log('yolo')
+            const project = event.split("|")
+            // console.log(project[0])
+            // console.log('stuff ' + (project[0] != user.name && project[0] != "undefined"))
+            if (project[0] != user.name && project[0] != "undefined"){
+                // console.log('usernameindex', players[userNames.indexOf(project[0])])
+                // console.log('userNames' + userNames)
+                if (userNames.indexOf(project[0]) == -1){
+                    console.log('im present')
+                    userNames.push(project[0])
+                    players.push(makePlayer())
+                }
+                userNames.indexOf(project[0])
 
-            //     let currentPlayer = players[userNames.indexOf(project[0])]
+                let currentPlayer = players[userNames.indexOf(project[0])]
 
-            //     // console.log("Valid other player: " + project[0])
-            //     // console.log('currentplayer : ' , currentPlayer)
-            //     // console.log('third username' + userNames[2])
+                // console.log("Valid other player: " + project[0])
+                // console.log('currentplayer : ' , currentPlayer)
+                // console.log('third username' + userNames[2])
 
-            //     currentPlayer.style.top = project[1]
-            //     // console.log(project[1])
+                currentPlayer.style.top = project[1]
+                // console.log(project[1])
 
-            //     currentPlayer.style.left = project[2]
-            //     // console.log(project[2])
+                currentPlayer.style.left = project[2]
+                // console.log(project[2])
 
-            //     velocity2 = project[3]
-            //     // console.log(project[3])
+                velocity2 = project[3]
+                // console.log(project[3])
 
-            //     velocity2 = project[4]
-            //     // console.log(project[4])
+                velocity2 = project[4]
+                // console.log(project[4])
 
-            //     message2.textContent = username.value
-            // }
+                message2.textContent = username.value
+            }
         })
                 
         const play = document.querySelector(".playButton")
