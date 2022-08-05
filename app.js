@@ -1,7 +1,7 @@
 holler.onLoad(()=>{
     holler.me((user)=>{
 
-        console.log("my name: " + user.name)
+console.log("my name: " + user.name)
 
         function makePlayer(){
             let PLAYER = document.createElement("IMG");
@@ -14,15 +14,15 @@ holler.onLoad(()=>{
             document.body.appendChild(PLAYER)
             return PLAYER
         }
-        const userNames = []
-        let players = []
+const userNames = []
+let players = []
         holler.onClientEvent(event=>{
             console.log('yolo')
             const project = event.split("|")
             console.log(project[0])
             console.log('stuff' + (project[0] != user.name && project[0] != "undefined"))
             if (project[0] != user.name && project[0] != "undefined"){
-                console.log('usernameindex' + userNames.indexOf(project[0]))
+                console.log('usernameindex', players[userNames.indexOf(project[0])])
                 console.log('userNames' + userNames)
                 if (userNames.indexOf(project[0]) == -1){
                     console.log('im present')
@@ -51,6 +51,9 @@ holler.onLoad(()=>{
 
                 message2.textContent = username.value
 
+                if(project[6] != message2){
+                    
+                }
             }
         })
          
@@ -75,11 +78,12 @@ holler.onLoad(()=>{
             let screen2 = document.querySelector(".screen2")
             screen2.style["display"] = "block"
             message2.textContent = username.value
+            player = makePlayer()
         }
-
+    
     //left and right
     
-            let position = window.visualViewport.width / 2
+    let position = window.visualViewport.width / 2
     let velocity = 0
 
 
@@ -172,22 +176,24 @@ holler.onLoad(()=>{
     }
     doNextFrame2()
 
-
+    const followplayer = ()=>{
+        message2.style.top = parseInt(player.style.top) - 300
+        message2.style.left = parseInt(player.style.left) - 648
+        setTimeout(followplayer, 2)
+    }
+    followplayer()
+   
     
     const sendPosition = ()=>{
-        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + velocity  + "|" + velocity2 + "|" + username.value + "|")
+
+        holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + velocity  + "|" + velocity2 + "|" + username.value + "|" + message2)
         setTimeout(sendPosition,10)
 
         console.log('user.name is :' + user.name)
 
     }
     sendPosition()
-
     }
 
-    //p2v
-    
-
-    
     })
 })

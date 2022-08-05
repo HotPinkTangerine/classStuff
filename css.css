@@ -15,8 +15,7 @@ body {
     font-family: monospace;
     font-size: 10px;
     position: relative;
-     bottom: 25px;
-    left: 5px; 
+    z-index: 200;
 }
 .screen2 {
     background-image:url('images/square.jpg');
