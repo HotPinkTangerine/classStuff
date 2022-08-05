@@ -12,49 +12,47 @@ holler.onLoad(()=>{
             PLAYER.setAttribute("height", "50px")
             PLAYER.setAttribute("width", "50px")
             document.body.appendChild(PLAYER)
+            PLAYER.classList = 'person'
             return PLAYER
         }
         const userNames = []
         let players = []
         holler.onClientEvent(event=>{
-            // console.log('yolo')
-            const project = event.split("|")
-            // console.log(project[0])
-            // console.log('stuff ' + (project[0] != user.name && project[0] != "undefined"))
-            if (project[0] != user.name && project[0] != "undefined"){
-                // console.log('usernameindex', players[userNames.indexOf(project[0])])
-                // console.log('userNames' + userNames)
-                if (userNames.indexOf(project[0]) == -1){
-                    console.log('im present')
-                    userNames.push(project[0])
-                    players.push(makePlayer())
-                }
-                userNames.indexOf(project[0])
+            console.log('event is ' + event)
+            // // console.log('yolo')
+            // const project = event.split("|")
+            // // console.log(project[0])
+            // // console.log('stuff ' + (project[0] != user.name && project[0] != "undefined"))
+            // if (project[0] != user.name && project[0] != "undefined"){
+            //     // console.log('usernameindex', players[userNames.indexOf(project[0])])
+            //     // console.log('userNames' + userNames)
+            //     if (userNames.indexOf(project[0]) == -1){
+            //         console.log('im present')
+            //         userNames.push(project[0])
+            //         players.push(makePlayer())
+            //     }
+            //     userNames.indexOf(project[0])
 
-                let currentPlayer = players[userNames.indexOf(project[0])]
+            //     let currentPlayer = players[userNames.indexOf(project[0])]
 
-                // console.log("Valid other player: " + project[0])
-                // console.log('currentplayer : ' , currentPlayer)
-                // console.log('third username' + userNames[2])
+            //     // console.log("Valid other player: " + project[0])
+            //     // console.log('currentplayer : ' , currentPlayer)
+            //     // console.log('third username' + userNames[2])
 
-                currentPlayer.style.top = project[1]
-                // console.log(project[1])
+            //     currentPlayer.style.top = project[1]
+            //     // console.log(project[1])
 
-                currentPlayer.style.left = project[2]
-                // console.log(project[2])
+            //     currentPlayer.style.left = project[2]
+            //     // console.log(project[2])
 
-                velocity2 = project[3]
-                // console.log(project[3])
+            //     velocity2 = project[3]
+            //     // console.log(project[3])
 
-                velocity2 = project[4]
-                // console.log(project[4])
+            //     velocity2 = project[4]
+            //     // console.log(project[4])
 
-                message2.textContent = username.value
-
-                if(project[6] != message2){
-                    
-                }
-            }
+            //     message2.textContent = username.value
+            // }
         })
                 
         const play = document.querySelector(".playButton")
@@ -186,11 +184,12 @@ holler.onLoad(()=>{
 
             const sendPosition = ()=>{
 
-                holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + velocity  + "|" + velocity2 + "|" + username.value + "|" + message2)
+                holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + velocity  + "|" + velocity2 + "|" + username.value)
                 setTimeout(sendPosition,10)
 
                 // console.log('user.name is :' + user.name)
-
+                let listOfPlayers = document.querySelectorAll('.person')
+                // if (listOfPlayers.forEach)
             }
             sendPosition()
         }
