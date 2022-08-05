@@ -1,7 +1,12 @@
 holler.onLoad(()=>{
     holler.me((user)=>{
-
-        console.log("my name: " + user.name)
+        let playerId  
+        if(user.name){
+            playerId = user.name
+        }else{
+            playerId = "anonymous" + (Math.random() * 10)
+        }
+        console.log("my playerId: ", playerId)
 
         function makePlayer(){
             let PLAYER = document.createElement("IMG");
@@ -18,22 +23,22 @@ holler.onLoad(()=>{
         const userNames = []
         let players = []
         holler.onClientEvent(event=>{
-            console.log('event is ' + event)
-            // console.log('yolo')
+            console.log("got something", event)
             const project = event.split("|")
+            const name = project[0]
             // console.log(project[0])
             // console.log('stuff ' + (project[0] != user.name && project[0] != "undefined"))
-            if (project[0] != user.name && project[0] != "undefined"){
+
+            if (name != playerId){
                 // console.log('usernameindex', players[userNames.indexOf(project[0])])
                 // console.log('userNames' + userNames)
-                if (userNames.indexOf(project[0]) == -1){
-                    console.log('im present')
-                    userNames.push(project[0])
+                if (userNames.indexOf(name) == -1){
+                    console.log('found a new user elsewhere', name)
+                    userNames.push(name)
                     players.push(makePlayer())
                 }
-                userNames.indexOf(project[0])
 
-                let currentPlayer = players[userNames.indexOf(project[0])]
+                let currentPlayer = players[userNames.indexOf(name)]
 
                 // console.log("Valid other player: " + project[0])
                 // console.log('currentplayer : ' , currentPlayer)
@@ -184,7 +189,7 @@ holler.onLoad(()=>{
 
             const sendPosition = ()=>{
 
-                holler.appInstance.notifyClients(user.name + "|" + player.style.top + "|" + player.style.left + "|" + velocity  + "|" + velocity2 + "|" + username.value)
+                holler.appInstance.notifyClients(playerId + "|" + player.style.top + "|" + player.style.left + "|" + velocity  + "|" + velocity2 + "|" + username.value)
                 setTimeout(sendPosition,10)
 
                 // console.log('user.name is :' + user.name)
